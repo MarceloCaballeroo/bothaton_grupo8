@@ -1,0 +1,29 @@
+<body>
+    <div class="ancho_body" style="flex-grow: 1;">
+        <main>
+            <h1>ChatBot Teletón</h1>
+
+            <div class="chatbot-container">
+                <div class="chat-interface">
+                    <div class="chat-window" id="chatWindow" role="log" aria-live="polite" aria-label="Ventana de chat">
+                        <div class="chat-message bot">
+                            <div class="message-content">
+                                ¡Hola! Soy el ChatBot de Teletón. ¿En qué puedo ayudarte hoy?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="userInput" placeholder="Escribe aquí..." aria-label="Escribe tu mensaje aquí" />
+                        <button id="sendButton" aria-label="Enviar mensaje">Enviar</button>
+                        <button id="recordButton" onclick="startRecording()" aria-label="Comenzar a grabar">
+                            🎤 Hablar
+                        </button>
+                    </div>
+                    <div id="recordingStatus" class="recording-status" style="display: none" aria-live="assertive">
+                        Grabando...
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
