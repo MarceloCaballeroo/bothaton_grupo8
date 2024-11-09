@@ -3,10 +3,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ffffff; /* Fondo blanco */
 }
 
 h1 {
-    color: #007ACC;
+    color: #ff0000; /* Color rojo */
 }
 
 .chatbot-container {
@@ -15,12 +16,55 @@ h1 {
     margin: 10px;
     width: 300px;
     text-align: center;
+    background-color: #f9f9f9; /* Fondo claro para el contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-#infoBotOutput, #appointmentBotOutput {
-    border: 1px solid #ddd;
-    height: 150px;
+.chat-window {
+    border: 1px solid #ff0000; /* Borde rojo */
+    height: 200px;
     overflow-y: scroll;
     margin-bottom: 10px;
     padding: 10px;
+    background-color: #ffffff; /* Fondo blanco para el chat */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.chat-message {
+    margin: 5px 0;
+}
+
+.chat-message.bot {
+    text-align: left;
+}
+
+.chat-message.user {
+    text-align: right;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+button {
+    background-color: #ff0000; /* Botones rojos */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc0000; /* Color más oscuro al pasar el mouse */
 }
