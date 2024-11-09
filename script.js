@@ -21,10 +21,18 @@ async function startRecording() {
             
             // Mostrar la transcripción en la ventana de chat
             addMessageToChat('user', transcription);
+            
+            // Ocultar el estado de grabación
+            document.getElementById('recordingStatus').style.display = 'none';
+            document.getElementById('recordButton').innerText = '🎤 Hablar'; // Cambiar el texto del botón
         };
         
         mediaRecorder.start();
         console.log('Grabando...');
+        
+        // Mostrar el estado de grabación
+        document.getElementById('recordingStatus').style.display = 'block';
+        document.getElementById('recordButton').innerText = '🔴 Grabando...'; // Cambiar el texto del botón
         
         // Detener la grabación después de 5 segundos
         setTimeout(() => {

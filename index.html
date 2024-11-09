@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatBot Teletón</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
     <div class="navbar">
-        <img src="logo-primary-dc1d5a81.png" alt="Teletón Logo" class="logo">
+        <img src="logo-primary-dc1d5a81.png" alt="Teletón Logo" class="logo" />
         <ul class="nav-links">
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Cómo ingresar a Teletón</a></li>
@@ -19,27 +21,37 @@
             <li><a href="#">Contacto</a></li>
         </ul>
     </div>
-    <div class="top-bar">
-        Súmate a nuestras redes | <a href="#" class="top-bar-link">Transparencia</a>
-    </div>
     <h1>ChatBot Teletón</h1>
-    
+
     <div class="chatbot-container">
         <div class="chat-interface">
             <div class="chat-window" id="chatWindow">
                 <div class="chat-message bot">
-                    <div class="message-content">¡Hola! Soy el ChatBot de Teletón. ¿En qué puedo ayudarte hoy?</div>
+                    <div class="message-content">
+                        ¡Hola! Soy el ChatBot de Teletón. ¿En qué puedo ayudarte hoy?
+                    </div>
                 </div>
             </div>
             <div class="chat-input">
-                <input type="text" id="userInput" placeholder="Escribe aquí...">
+                <input type="text" id="userInput" placeholder="Escribe aquí..." />
                 <button onclick="sendToBot()">Enviar</button>
-                <button onclick="startRecording()">🎤 Hablar</button>
+                <button id="recordButton" onclick="startRecording()">
+                    🎤 Hablar
+                </button>
+            </div>
+            <div id="recordingStatus" class="recording-status" style="display: none">
+                Grabando...
             </div>
         </div>
     </div>
-    
+
+    <div class="top-bar"></div>
+        Súmate a nuestras redes |
+        <a href="#" class="top-bar-link">Transparencia</a>
+    </div>
+
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

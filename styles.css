@@ -115,3 +115,9 @@ button {
 button:hover {
     background-color: #cc0000; /* Color más oscuro al pasar el mouse */
 }
+
+.recording-status {
+    color: #ff0000; /* Color rojo para el estado de grabación */
+    font-weight: bold;
+    margin-top: 10px;
+}
