@@ -6,7 +6,13 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+#containerForHiddenElement {
+    position: absolute;
+    top: 100px; /* Ajusta esto según la posición que desees */
+    left: 50px; /* Ajusta esto según la posición que desees */
+    width: 0; /* No ocupa espacio visible */
+    height: 0; /* No ocupa espacio visible */
+}
 h1 {
     font-family: 'Arial', sans-serif;
     color: white;

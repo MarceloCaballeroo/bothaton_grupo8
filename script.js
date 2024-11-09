@@ -25,6 +25,13 @@ async function startRecording() {
             // Ocultar el estado de grabación
             document.getElementById('recordingStatus').style.display = 'none';
             document.getElementById('recordButton').innerText = '🎤 Hablar'; // Cambiar el texto del botón
+
+            // Guardar la transcripción en un elemento oculto
+            document.getElementById('hiddenTranscription').value = transcription;
+
+            // Mostrar la transcripción visiblemente en el contenedor
+            document.getElementById('visibleTranscription').innerText = transcription;
+
         };
         
         mediaRecorder.start();
@@ -55,7 +62,7 @@ async function transcribeAudio(audioBlob) {
         const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
             method: 'POST',
             headers: {
-                'Authorization': `API_KEY`, // Reemplaza con tu clave de API de OpenAI
+                'Authorization': `Api_key`, // Reemplaza con tu clave de API de OpenAI
             },
             body: formData
         });
