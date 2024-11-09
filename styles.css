@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ff0000; /* Fondo blanco */
+    background-color: #e63742; /* Fondo blanco */
 }
 
 h1 {
@@ -20,7 +20,7 @@ h1 {
     position: sticky;
     top: 0;
     width: 100%;
-    border-bottom: 2px solid #FF0033;
+    border-bottom: 2px solid #e63742;
     z-index: 10;
 }
 
