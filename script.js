@@ -62,7 +62,7 @@ async function transcribeAudio(audioBlob) {
         const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
             method: 'POST',
             headers: {
-                'Authorization': `Api_key`, // Reemplaza con tu clave de API de OpenAI
+                'Authorization': `API`, // Reemplaza con tu clave de API de OpenAI
             },
             body: formData
         });
@@ -110,3 +110,13 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('footer').innerHTML = data;
         });
 });
+
+function sendMessage() {
+    const userInput = document.getElementById('userInput');
+    const message = userInput.value.trim(); // Obtener el valor del input y eliminar espacios en blanco
+
+    if (message) {
+        addMessageToChat('user', message); // Agregar el mensaje del usuario al chat
+        userInput.value = ''; // Limpiar el input después de enviar
+    }
+}
