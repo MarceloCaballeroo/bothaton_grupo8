@@ -80,3 +80,26 @@ function addMessageToChat(sender, message) {
     chatWindow.appendChild(messageDiv);
     chatWindow.scrollTop = chatWindow.scrollHeight; // Desplazar hacia abajo
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Cargar el Navbar
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+
+    // Cargar el Body
+    fetch('body.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('body-content').innerHTML = data;
+        });
+
+    // Cargar el Footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+});
