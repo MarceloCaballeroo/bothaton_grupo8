@@ -2,7 +2,7 @@ import openai
 import sys  # Para recibir argumentos desde el bot de Automation Anywhere
 
 # Establecer la API key de OpenAI
-openai.api_key = "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"
+openai.api_key = "API_KEY"
 
 # Función para transcribir el audio usando Whisper
 def transcribir_audio(audio_path):

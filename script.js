@@ -47,7 +47,7 @@ async function transcribeAudio(audioBlob) {
         const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer API_KEY`, // Reemplaza con tu clave de API de OpenAI
+                'Authorization': `API_KEY`, // Reemplaza con tu clave de API de OpenAI
             },
             body: formData
         });
