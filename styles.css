@@ -111,7 +111,7 @@ h1 {
 }
 
 .chat-message.bot {
-    align-self: flex-start;
+    align-self: flex-end;
     background-color: #e1ffc7;
 }
 
