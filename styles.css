@@ -1,4 +1,4 @@
-.body {
+body {
     font-family: 'Arial', sans-serif;
     background-color: #e63742;
     min-height: 100vh;
@@ -11,9 +11,9 @@ h1 {
     font-family: 'Arial', sans-serif;
     color: white;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .ancho_body {
@@ -379,4 +379,41 @@ button:hover {
 
 .footer-section ul li a:hover {
     color: #cccccc;
+}
+
+/* Centrando el formulario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alineando labels y entradas para el formulario de manera simétrica */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    width: 120px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: right;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }

@@ -16,20 +16,26 @@
         <div class="chatbot-container">
             <div class="chat-interface">
                 <form action="/submit" method="POST">
-                    <label for="id">ID Teleton:</label>
-                    <input type="text" id="id" name="id" required><br><br>
-                    
-                    <label for="tipoConsulta">Tipo de Consulta:</label>
-                    <input type="text" id="tipoConsulta" name="tipoConsulta" required><br><br>
-                    
-                    <label for="dia">Día:</label>
-                    <input type="date" id="dia" name="dia" required><br><br>
-                    
-                    <label for="hora">Hora:</label>
-                    <input type="time" id="hora" name="hora" required min="09:00" max="19:00"><br><br>
-                    
-                    <button type="submit">Enviar</button>
-                    <button type="button" onclick="window.location.href='index.html'">Volver a Inicio</button>
+                    <div class="form-group">
+                        <label for="id">ID Teleton:</label>
+                        <input type="text" id="id" name="id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipoConsulta">Tipo de Consulta:</label>
+                        <input type="text" id="tipoConsulta" name="tipoConsulta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dia">Día:</label>
+                        <input type="date" id="dia" name="dia" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora:</label>
+                        <input type="time" id="hora" name="hora" required min="09:00" max="19:00">
+                    </div>
+                    <div class="button-group">
+                        <button type="submit">Enviar</button>
+                        <button type="button" onclick="window.location.href='index.html'">Volver a Inicio</button>
+                    </div>
                 </form>
             </div>
         </div>
