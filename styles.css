@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #007ACC;
+}
+
+.chatbot-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+#infoBotOutput, #appointmentBotOutput {
+    border: 1px solid #ddd;
+    height: 150px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    padding: 10px;
+}

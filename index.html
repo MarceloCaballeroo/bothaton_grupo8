@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot Teletón</title>
+</head>
+<body>
+    <h1>ChatBot Teletón</h1>
+    
+    <!-- Sección para escribir o grabar la consulta -->
+    <div>
+        <label for="userInput">Ingrese su consulta:</label>
+        <input type="text" id="userInput" placeholder="Escribe aquí...">
+        <button onclick="sendToBot()">Enviar</button>
+        <button onclick="startRecording()">🎙️ Hablar</button>
+    </div>
+    
+    <!-- Área para mostrar la respuesta del bot -->
+    <div id="botResponse"></div>
+    
+    <!-- Incluir el archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
