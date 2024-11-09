@@ -1,102 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ChatBot Teletón</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
-
 <body>
-    <div class="navbar">
-        <img src="logo-primary-dc1d5a81.png" alt="Teletón Logo" class="logo" />
-        <ul class="nav-links">
-            <li><a href="https://www.teleton.cl/corporativo/">Inicio</a></li>
-            <li><a href="https://www.teleton.cl/como-ingresar-a-teleton/">Cómo ingresar a Teletón</a></li>
-            <li><a href="https://www.teleton.cl/rehabilitacion-e-inclusion/">Rehabilitación e Inclusión</a></li>
-            <li><a href="https://www.teleton.cl/paciente-y-familias-teleton/">Paciente y Familias Teletón</a></li>
-            <li><a href="https://teletontv.cl/es">Teletón TV</a></li>
-            <li><a href="https://www.teleton.cl/nosotros/">Nosotros</a></li>
-            <li><a href="https://www.teleton.cl/contacto/">Contacto</a></li>
-        </ul>
-    </div>
-    
-    <h1>Formulario para Agendar Hora en Teletón</h1>
-    <div class="chatbot-container">
-        <div class="chat-interface">
-          <form action="/submit" method="POST">
-            <label for="id">ID Teleton:</label>
-            <input type="text" id="id" name="id" required><br><br>
-    
-            <label for="tipoConsulta">Tipo de Consulta:</label>
-            <input type="text" id="tipoConsulta" name="tipoConsulta" required><br><br>
-    
-            <label for="dia">Día:</label>
-            <input type="date" id="dia" name="dia" required><br><br>
-    
-            <label for="hora">Hora:</label>
-            <input type="time" id="hora" name="hora" required min="09:00" max="19:00"><br><br>
-    
-            <button type="submit">Enviar</button>
-            <button type="button" onclick="window.location.href='index.html'">Volver a Inicio</button>
-        </form>
-        </div>
-    </div>
+    <!-- Navbar -->
+    <div id="navbar"></div>
 
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <main>
+        <h1>Formulario para Agendar Hora en Teletón</h1>
+        <div class="chatbot-container">
+            <div class="chat-interface">
+                <form action="/submit" method="POST">
+                    <label for="id">ID Teleton:</label>
+                    <input type="text" id="id" name="id" required><br><br>
+                    
+                    <label for="tipoConsulta">Tipo de Consulta:</label>
+                    <input type="text" id="tipoConsulta" name="tipoConsulta" required><br><br>
+                    
+                    <label for="dia">Día:</label>
+                    <input type="date" id="dia" name="dia" required><br><br>
+                    
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required min="09:00" max="19:00"><br><br>
+                    
+                    <button type="submit">Enviar</button>
+                    <button type="button" onclick="window.location.href='index.html'">Volver a Inicio</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Cargar el Navbar
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+
+            // Cargar el Footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
 </body>
-
 </html>
-<footer style="background-color: #E60028; padding: 30px 0; color: white; text-align: center;">
-  <div class="container">
-    <div class="footer-content">
-      <img src="logo.png" alt="Teletón" style="margin-bottom: 20px;">
-      <div class="search-bar" style="margin-bottom: 20px;">
-        <input type="text" placeholder="Realiza una búsqueda" style="padding: 10px; width: 60%; max-width: 400px; border-radius: 5px; border: none;">
-        <button type="button" style="padding: 10px 15px; border: none; background-color: #fff; border-radius: 5px; cursor: pointer;">Buscar</button>
-      </div>
-      <div class="links">
-        <div class="footer-links" style="display: inline-block; margin-right: 20px;">
-          <h3>COMUNIDAD</h3>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="https://www.teleton.cl/como-ingresar-a-teleton/" style="color: white; text-decoration: none;">Cómo ingresar a Teletón</a></li>
-            <li><a href="https://www.teleton.cl/rehabilitacion-e-inclusion/" style="color: white; text-decoration: none;">Rehabilitación e inclusión</a></li>
-          </ul>
-        </div>
-        <div class="footer-links" style="display: inline-block; margin-right: 20px;">
-          <h3>PRENSA</h3>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="https://www.teleton.cl/noticias/" style="color: white; text-decoration: none;">Noticias</a></li>
-            <li><a href="https://www.teleton.cl/transparencia/" style="color: white; text-decoration: none;">Transparencia</a></li>
-            <li><a href="https://teletontv.cl/es" style="color: white; text-decoration: none;">Teletón TV</a></li>
-          </ul>
-        </div>
-        <div class="footer-links" style="display: inline-block;">
-          <h3>INSTITUCIONAL</h3>
-          <ul style="list-style: none; padding: 0;">
-            <li><a href="https://www.teleton.cl/nosotros/" style="color: white; text-decoration: none;">Nosotros</a></li>
-            <li><a href="https://www.teleton.cl/contacto/" style="color: white; text-decoration: none;">Contacto</a></li>
-            <li><a href="https://www.teleton.cl/trabaja-con-nosotros/" style="color: white; text-decoration: none;">Trabaja con nosotros</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="contact-info" style="margin: 30px 0;">
-      <p style="margin: 5px;">DIRECCIÓN: Av. Libertador Bernardo O'Higgins 4620, Santiago</p>
-      <p style="margin: 5px;">TELÉFONO: 600 24500 03</p>
-      <p style="margin: 5px;">Opción 1 – Servicio Orientación Médica Telefónica para Pacientes</p>
-      <p style="margin: 5px;">Opción 2 – Información general funcionamiento Institutos</p>
-    </div>
-    <div class="footer-tools" style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 20px;">
-      <button style="background: none; border: none; color: white; cursor: pointer; font-size: 1rem; margin: 5px;">A+ Agrandar</button>
-      <button style="background: none; border: none; color: white; cursor: pointer; font-size: 1rem; margin: 5px;">A- Disminuir</button>
-      <button style="background: none; border: none; color: white; cursor: pointer; font-size: 1rem; margin: 5px;">Guía de Lectura</button>
-      <button style="background: none; border: none; color: white; cursor: pointer; font-size: 1rem; margin: 5px;">Contraste</button>
-      <button style="background: none; border: none; color: white; cursor: pointer; font-size: 1rem; margin: 5px;">Resaltar Objetos</button>
-      <button style="background: none; border: none; color: white; cursor: pointer; font-size: 1rem; margin: 5px;">Cursor</button>
-      <button style="background: none; border: none; color: white; cursor: pointer; font-size: 1rem; margin: 5px;">Audio Lectura</button>
-    </div>
-  </div>
-</footer>
