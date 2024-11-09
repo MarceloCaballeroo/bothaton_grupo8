@@ -11,6 +11,11 @@
     <!-- Navbar -->
     <div id="navbar"></div>
 
+    <div id="containerForHiddenElement" style="display: none; position: absolute; top: 150px; left: 20px; width: 300px; border: 2px solid #e63742; padding: 10px;">
+        <input type="hidden" id="hiddenTranscription">
+        <div id="visibleTranscription" style="color: transparent; background-color: transparent;"></div> <!-- Texto oculto sin fondo -->
+    </div>
+
     <main class="ancho_body">
         <h1>Formulario para Agendar Hora en Teletón</h1>
         <div class="chatbot-container">
@@ -71,4 +76,25 @@
         });
     </script>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // ... código existente ...
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Evitar el envío del formulario
+
+            // Obtener los valores del formulario
+            const id = document.getElementById('id').value;
+            const tipoConsulta = document.getElementById('tipoConsulta').value;
+            const dia = document.getElementById('dia').value;
+            const hora = document.getElementById('hora').value;
+
+            // Mostrar la información en el div oculto
+            document.getElementById('visibleTranscription').innerText = `ID: ${id}, Tipo de Consulta: ${tipoConsulta}, Día: ${dia}, Hora: ${hora}`;
+            document.getElementById('containerForHiddenElement').style.display = 'block'; // Mostrar el div
+        });
+    });
+</script>
 </html>
